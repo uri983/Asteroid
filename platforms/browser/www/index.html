@@ -47,8 +47,8 @@
         overflow-x: auto; 
     }
     .navbar{
-        background-color: #e3e3e5; 
-        padding: .5em;
+            background-color: rgba(68, 156, 193, 0); 
+       
         right: 0;
         left: 0;
         width: auto;
@@ -57,7 +57,7 @@
         z-index: 99999999;
     }
     .title{
-        color: #444;
+        color: #fff;
         font-size: 1.5em;
         left: 0;
     }
@@ -73,6 +73,8 @@
     .navbar-on-left .title{
         transform: translate3d(-200px,0px,0px) !important ; 
     }
+
+
 </style>
 
 
@@ -91,24 +93,42 @@
     <div class="panel-overlay"></div>
     <!-- Left panel with reveal effect-->
     <div class="panel panel-left panel-reveal">
-        <div class="snap-drawer snap-drawer-left">
-          <div class="drawer-inner">
-            <ul>
-              <li><a href="index.html"><i class="mdi mdi-home"></i> <span>Home</span></a></li>
-              <li><a href="profile.html"><i class="mdi mdi-account"></i> <span>Profile</span></a></li>
-              <li><a href="portfolio.html"><i class="mdi mdi-file-image-box"></i> <span>Portfolio</span></a></li>
-              <li><a href="blog.html"><i class="mdi mdi-book-multiple-variant"></i> <span>Blog <span class="badge white z-depth-1">4</span></span></a></li>
-              <li><a href="news.html"><i class="mdi mdi-rss"></i> <span>News</span></a></li>
-              <li><a href="contacts.html"><i class="mdi mdi-map-marker"></i> <span>Contacts</span></a></li>
-          </ul>
-
-            <ul class="exit">
-                <li>
-                    <a href="login.html"><i class="mdi mdi-exit-to-app"></i> <span>Logout</span></a>
-                </li>
-            </ul>
-        </div>
-        </div>
+                    <div class="list-block">
+                        <ul>
+                            <li><a href="index.html" class="item-link close-panel">
+                        <div class="item-content">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                        <div class="item-title">Inicio</div>
+                        </div>
+                        </div></a></li>
+                        <li><a href="profile.html" class="item-link close-panel">
+                        <div class="item-content">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                        <div class="item-title">Noticias</div>
+                        </div>
+                        </div></a></li>
+                        <li><a href="list-view.html" class="item-link close-panel">
+                        <div class="item-content">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                        <div class="item-title">Puertos</div>
+                        </div>
+                        </div></a></li>
+                        <li><a href="media-lists.html" class="item-link close-panel">
+                        <div class="item-content">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                        <div class="item-title">Servicios</div>
+                        </div>
+                        </div></a></li>
+                        
+                        
+                        
+                        </ul>
+                    </div>
+        
 </div>
 
 <!-- Views -->
@@ -117,15 +137,11 @@
     <div class="view view-main">
         <!-- Top Navbar-->
         <div class="navbar">
-                    <div  class="navbar-inner">
+                    
                         <div class="open-left" id="open-left">
                             <a href="#" class="link icon-only open-panel"><i class="mdi mdi-sort-variant"></i></a> 
                         </div>
-                        <span class="title">Asteroid</span>
-                        <div class="open-right" id="open-right">
-
-                        </div>
-                    </div>
+                        
                 </div>
 
 
@@ -144,9 +160,9 @@
                   <div class="bottom">
                     <div class="container scene_element scene_element--fadein scene_element--delayed">
                       <h4 class="slogan left-align white-text">
-                        Design <span class="primary-color-text" id="changeText">Beautiful</span> mobile websites with Asteroid
+                        APIQROO <span class="primary-color-text" id="changeText">Creciendo</span> con oportunidades para todos
                     </h4>
-                    <a class="btn-large waves-effect waves-light primary-color-text primary-border transparent modal-trigger fullwidth z-depth-1" href="about.html">Features</a>
+                    <a class="btn-large waves-effect waves-light primary-color-text primary-border transparent modal-trigger fullwidth z-depth-1" href="about.html">Ultimas noticias</a>
                 </div>
             </div>
         </div>
@@ -166,7 +182,7 @@
 <script type="text/javascript">
   $(function () {
     count = 0;
-    wordsArray = ["Creative", "Innovative", "Clean", "Beautiful"];
+    wordsArray = ["Innovando", "Desarrollando", "Clean", "Beautiful"];
     setInterval(function () {
       count++;
       $("#changeText").fadeOut(400, function () {
