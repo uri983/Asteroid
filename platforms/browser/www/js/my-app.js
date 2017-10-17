@@ -13,11 +13,15 @@ var mainView = myApp.addView('.view-main', {
 
 // Handle Cordova Device Ready Event
 $$(document).on('deviceready', function() {    
-    if(localStorage.curp == undefined ) {
-       mainView.router.load({
-    url: 'login.html'    
-    })     
-    }  
+    if(localStorage.curp != undefined ) {
+       myApp.closeModal();    
+    } 
+
+    $("#vincular").on('click',function (e) {
+    localStorage.curp = $('#curp').val();
+    myApp.closeModal(); 
+
+    })
 
     $("#check").on('click',function (e) {
         cordova.plugins.barcodeScanner.scan(
@@ -53,9 +57,7 @@ $$(document).on('deviceready', function() {
 
     $("#desvincular").on('click',function (e) {
        localStorage.removeItem("curp");
-        mainView.router.load({
-    url: 'login.html'    
-    }) 
+       myApp.loginScreen();
         
     })
 
@@ -76,13 +78,7 @@ myApp.onPageInit('index', function (page) {
 myApp.onPageInit('login', function (page) {
     $('.navbar').css('background-color','rgba(18, 41, 75, 0)');
 
-    $("#vincular").on('click',function (e) {
-    localStorage.curp = $('#curp').val();
-     mainView.router.load({
-    url: 'index.html'    
-    }) 
-
-    })
+    
 
 })
 
