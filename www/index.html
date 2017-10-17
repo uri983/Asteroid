@@ -44,12 +44,12 @@
         overflow-x: auto; 
     }
     .navbar{
-            background-color: rgba(68, 156, 193, 0); 
+            background-color: #12294b; 
        
         right: 0;
         left: 0;
         width: auto;
-        /* height: 56px; */
+        height: 50px; 
         position: absolute;
         z-index: 99999999;
     }
@@ -124,20 +124,21 @@
             <!-- Your main view, should have "view-main" class -->
             <div class="view view-main">
                 <!-- Top Navbar-->
+
+                <div class="navbar">
+                    
+                    <div class="navbar-inner">
+                    <div class="center">Checador</div>
+                    <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+                    </div>
+                </div>
                 <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
                 <div class="pages">
                     <!-- Page Content -->
-                    <div class="page page-on-center z-depth-5" data-page="index" data-view=".main-view" style="top:0;">
+                    <div class="page page-on-center z-depth-5" data-page="index" data-view=".main-view" style="top:50px;" >
                         <!-- Toolbar -->
-                        <div class=" page-content">
-                            <div class="navbar">
-                                <div class="open-left" id="open-left">
-                                    <a class="link icon-only open-panel" href="#">
-                                        <i class="mdi mdi-sort-variant">
-                                        </i>
-                                    </a>
-                                </div>
-                            </div>
+                        <div class="scene_element scene_element--fadeinup page-content">
+                            
                             <!-- Profile HEader -->
                             <div class="profile-header">
                                 <img alt="" src="img/profile.jpg">
