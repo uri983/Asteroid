@@ -12,7 +12,55 @@ var mainView = myApp.addView('.view-main', {
 });
 
 // Handle Cordova Device Ready Event
-$$(document).on('deviceready', function() {
+$$(document).on('deviceready', function() {    
+    if(localStorage.curp == undefined ) {
+       mainView.router.load({
+    url: 'login.html'    
+    })     
+    }  
+
+    $("#check").on('click',function (e) {
+        cordova.plugins.barcodeScanner.scan(
+              function (result) {
+                  var d = new Date($.now());
+                  var time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+                  navigator.notification.alert(
+                    'Registro completado', 
+                    '',            
+                    'Exito',     
+                    'OK'     
+                    );           
+              },
+              function (error) {
+                  alert("Scanning failed: " + error);
+              },
+              {
+                  preferFrontCamera : false, // iOS and Android
+                  showFlipCameraButton : true, // iOS and Android
+                  showTorchButton : true, // iOS and Android
+                  torchOn: false, // Android, launch with the torch switched on (if available)
+                  saveHistory: true, // Android, save scan history (default false)
+                  prompt : "Escanea el código QR", // Android
+                  resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
+                   // default: all but PDF_417 and RSS_EXPANDED
+                   // Android only (portrait|landscape), default unset so it rotates with the device
+                  disableAnimations : true, // iOS
+                  disableSuccessBeep: false // iOS and Android
+              }
+       ); 
+        
+    })
+
+    $("#desvincular").on('click',function (e) {
+       localStorage.removeItem("curp");
+        mainView.router.load({
+    url: 'login.html'    
+    }) 
+        
+    })
+
+    
+    
     console.log("Device is ready!");
 });
 
@@ -20,10 +68,25 @@ $$(document).on('deviceready', function() {
 // Now we need to run the code that will be executed only for About page.
 
 // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
-myApp.onPageInit('about', function (page) {
-    // Do something here for "about" page
+myApp.onPageInit('index', function (page) {
+    
 
 })
+
+myApp.onPageInit('login', function (page) {
+    $('.navbar').css('background-color','rgba(18, 41, 75, 0)');
+
+    $("#vincular").on('click',function (e) {
+    localStorage.curp = $('#curp').val();
+     mainView.router.load({
+    url: 'index.html'    
+    }) 
+
+    })
+
+})
+
+
 
 // Option 2. Using one 'pageInit' event handler for all pages:
 $$(document).on('pageInit', function (e) {

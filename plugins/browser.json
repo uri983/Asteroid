@@ -15,6 +15,12 @@
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.apiqroo.app"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.srhcheck.app"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.srhcheck.app"
         }
     },
     "dependent_plugins": {}
