@@ -99,11 +99,15 @@
         <div class="panel-overlay">
         </div>
         <!-- Left panel with reveal effect-->
-        <div style="background-image: url(img/profile.jpg); color: white;" class="panel panel-left panel-reveal">
+        <div class="panel panel-left panel-cover layout-dark " style="display: block; background-image: url(img/profile.jpg); color: white;">
+            <div class="content-block-title">
+                MENU
+            </div>
+            
             <div class="list-block">
                 <ul>
                     <li>
-                        <a id="desvincular" class="item-link close-panel" >
+                        <a class="item-link close-panel" id="desvincular">
                             <div class="item-content">
                                 <div class="item-media">
                                     <i class="mdi mdi-do-not-disturb">
@@ -125,28 +129,32 @@
             <!-- Your main view, should have "view-main" class -->
             <div class="view view-main">
                 <!-- Top Navbar-->
-
                 <div class="navbar">
-                    
                     <div class="navbar-inner">
-                    <div class="center">Checador</div>
-                    <div class="right"><a href="#" class="open-panel link icon-only"><i class="icon icon-bars"></i></a></div>
+                        <div class="center">
+                            Checador
+                        </div>
+                        <div class="right">
+                            <a class="open-panel link icon-only" href="#">
+                                <i class="icon icon-bars">
+                                </i>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
                 <div class="pages">
                     <!-- Page Content -->
-                    <div class="page page-on-center z-depth-5" data-page="index" data-view=".main-view" style="top:50px;" >
+                    <div class="page page-on-center z-depth-5" data-page="index" data-view=".main-view" style="top:50px;">
                         <!-- Toolbar -->
                         <div class="scene_element scene_element--fadeinup page-content">
-                            
                             <!-- Profile HEader -->
                             <div class="profile-header">
                                 <img alt="" src="img/profile.jpg">
                                     <div class="overlay-gradient">
                                     </div>
                                     <div class="contact profile-user">
-                                        <img alt="" src="img/user8.jpg">
+                                        <img alt="" src="img/user7.jpg">
                                             <h5 class="white-text">
                                                 Uriel Manuel Velasquez Mendez
                                             </h5>
@@ -167,37 +175,40 @@
                                     </h4>
                                     <form class="list-block inputs-list">
                                         <ul>
-
-                                        <li>
-                                        <div class="item-content">
-                                        <div class="item-media"><i class="mdi mdi-domain"></i></div>
-                                        <div class="item-inner">
-                                        <div class="item-title label">EMPRESA</div>
-                                        <p style="font-size: 12px;">ACD</p>
-                                        </div>
-                                        </div>
-                                        </li>
-                                        <li>
-                                        <div class="item-content">
-                                        <div class="item-media"><i class="mdi mdi-domain"></i></div>
-                                        <div class="item-inner">
-                                        <div class="item-title label">DEPARTAMENTO</div>
-                                        <p style="font-size: 12px;">SISTEMAS</p>
-                                        </div>
-                                        </div>
-                                        </li>
-                                        
-                                        
-                                        
-                                        
-                                        
-                                       
-                                        
-                                        
-                                       
-                                        
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media">
+                                                        <i class="mdi mdi-domain">
+                                                        </i>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">
+                                                            EMPRESA
+                                                        </div>
+                                                        <p style="font-size: 12px;">
+                                                            ACD
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media">
+                                                        <i class="mdi mdi-domain">
+                                                        </i>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">
+                                                            DEPARTAMENTO
+                                                        </div>
+                                                        <p style="font-size: 12px;">
+                                                            SISTEMAS
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
                                         </ul>
-                                </form>
+                                    </form>
                                 </div>
                                 <div class="profile-description">
                                     <h4 class="paragraph-title">
@@ -245,46 +256,43 @@
             </div>
             <div class="login-screen modal-in">
                 <div class="page page-on-center snap-content z-depth-5" data-page="login" data-view=".main-view" style="top:0;">
-    <!-- Toolbar -->
-    <!-- Main Content -->
-    <div style="background-color: rgba(18, 41, 75, 0);" class="navbar">
-                    
-                    
-    </div>
-    <div class="scene_element login valign-wrapper scene_element--fadeinright  page-content">
-
-        <div class="valign">
-            <div class="container">
-                <div class="profile-header">
-                    <div class="contact profile-user">
-                        <!--<img alt="" class="z-depth-1" src="img/user8.jpg">-->
-                        <h4 style="color: white;">
-                            Vincular dispositivo
-                        </h4>
+                    <!-- Toolbar -->
+                    <!-- Main Content -->
+                    <div class="navbar" style="background-color: rgba(18, 41, 75, 0);">
                     </div>
-                </div>
-                <div class="container white z-depth-2">
-                    <div class="input-field col s12">
-                        <i class="mdi mdi-account-circle prefix">
-                        </i>
-                        <input class="validate" id="CURP" style="color: black;" type="text">
-                            <label for="login">
-                                CURP
-                            </label>
-                        </input>
+                    <div class="scene_element login valign-wrapper scene_element--fadeinright page-content">
+                        <div class="valign">
+                            <div class="container">
+                                <div class="profile-header">
+                                    <div class="contact profile-user">
+                                        <!--<img alt="" class="z-depth-1" src="img/user8.jpg">-->
+                                        <h4 style="color: white;">
+                                            Vincular dispositivo
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="container white z-depth-2">
+                                    <div class="input-field col s12">
+                                        <i class="mdi mdi-account-circle prefix">
+                                        </i>
+                                        <input class="validate" id="CURP" style="color: black;" type="text">
+                                            <label for="login">
+                                                CURP
+                                            </label>
+                                        </input>
+                                    </div>
+                                    <a class="waves-effect waves-light btn-large primary-color fullwidth" id="vincular">
+                                        Vincular
+                                    </a>
+                                    <span>
+                                        Podras desvincularte cuando quieras
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a id="vincular" class="waves-effect waves-light btn-large primary-color fullwidth" >
-                        Vincular
-                    </a>
-                    <span>
-                        Podras desvincularte cuando quieras
-                    </span>
+                    <!-- End of Main Contents -->
                 </div>
-            </div>
-        </div>
-    </div>
-    <!-- End of Main Contents -->
-</div>
             </div>
         </div>
     </body>
