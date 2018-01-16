@@ -29,16 +29,16 @@ $$(document).on('deviceready', function() {
                   var d = new Date($.now());
                   var time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
 
-                  if(result != ""){
+                  
 
                    navigator.notification.alert(
-                    'Registro completado', 
+                    'Registro completado' + result, 
                     '',            
                     'Exito',     
                     'OK'     
                     ); 
                      
-                  }
+                  
                             
               },
               function (error) {
