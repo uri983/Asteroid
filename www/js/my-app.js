@@ -28,12 +28,18 @@ $$(document).on('deviceready', function() {
               function (result) {
                   var d = new Date($.now());
                   var time = d.getFullYear()+"-"+(d.getMonth()+1)+"-"+d.getDate()+" "+d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
-                  navigator.notification.alert(
+
+                  if(result != ""){
+
+                   navigator.notification.alert(
                     'Registro completado', 
                     '',            
                     'Exito',     
                     'OK'     
-                    );           
+                    ); 
+                     
+                  }
+                            
               },
               function (error) {
                   alert("Scanning failed: " + error);
