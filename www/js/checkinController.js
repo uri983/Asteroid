@@ -46,6 +46,7 @@ var jCheck = function(){
                       'token'     : code,
                       'idemploye' : localStorage.idemploye,
                       'device'    : device.platform,
+                      'UTC'       : 1,
                     },
           success   : function(response){
             SpinnerPlugin.activityStop();
