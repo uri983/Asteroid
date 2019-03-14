@@ -1,24 +1,30 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.srhcheck.app"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.srhcheck.app"
     },
-    "installed_plugins": {
-        "cordova-plugin-dialogs": {
-            "PACKAGE_NAME": "com.srhcheck.app"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.srhcheck.app"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.srhcheck.app"
-        },
-        "phonegap-plugin-barcodescanner": {
-            "PACKAGE_NAME": "com.srhcheck.app"
-        }
+    "cordova-plugin-spinner": {
+      "PACKAGE_NAME": "com.srhcheck.app"
     },
-    "dependent_plugins": {}
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.srhcheck.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.srhcheck.app"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.srhcheck.app"
+    }
+  },
+  "dependent_plugins": {}
 }

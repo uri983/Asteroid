@@ -29,6 +29,9 @@
 		9DCDBFD0AB3E4006822F5D29 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D5CA2EFA8042009BB9D91B /* CoreVideo.framework */; };
 		AD8EBA84C2654432A427E3BB /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBCE1CE774E64807A3B321DA /* QuartzCore.framework */; };
 		2FBB544A6E7F4FD4984136B2 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A28F359C4BFB478AA6E48A84 /* CoreImage.framework */; };
+		55227155D1D7427B80D8B2D3 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F414FCABDF4F4DE4B8DC7AE9 /* CDVDevice.m */; };
+		DCC45EE339BC4B20829EB640 /* SpinnerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D10916BC9F4B6991D85934 /* SpinnerPlugin.m */; };
+		378BAD35A7034390BB9DA2B1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 341CE9DDD98A4A66B1B845F9 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,12 @@
 		E9D5CA2EFA8042009BB9D91B /* CoreVideo.framework */ = {isa = PBXFileReference; name = "CoreVideo.framework"; path = "System/Library/Frameworks/CoreVideo.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		FBCE1CE774E64807A3B321DA /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		A28F359C4BFB478AA6E48A84 /* CoreImage.framework */ = {isa = PBXFileReference; name = "CoreImage.framework"; path = "System/Library/Frameworks/CoreImage.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		F414FCABDF4F4DE4B8DC7AE9 /* CDVDevice.m */ = {isa = PBXFileReference; name = "CDVDevice.m"; path = "cordova-plugin-device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C8027BF21C694700BB33716F /* CDVDevice.h */ = {isa = PBXFileReference; name = "CDVDevice.h"; path = "cordova-plugin-device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		57D10916BC9F4B6991D85934 /* SpinnerPlugin.m */ = {isa = PBXFileReference; name = "SpinnerPlugin.m"; path = "cordova-plugin-spinner/SpinnerPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		341CE9DDD98A4A66B1B845F9 /* MBProgressHUD.m */ = {isa = PBXFileReference; name = "MBProgressHUD.m"; path = "cordova-plugin-spinner/MBProgressHUD.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		2CE8CEA8F40646EE9B349B9C /* SpinnerPlugin.h */ = {isa = PBXFileReference; name = "SpinnerPlugin.h"; path = "cordova-plugin-spinner/SpinnerPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		BFFC8B3DB67C4322AF7FA94D /* MBProgressHUD.h */ = {isa = PBXFileReference; name = "MBProgressHUD.h"; path = "cordova-plugin-spinner/MBProgressHUD.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +219,12 @@
 				A8AB7BFA34C14C0995769149 /* CDVBarcodeScanner.mm */,
 				21DCC4AEE5C14294B5F6DA4D /* zxing-all-in-one.cpp */,
 				0081BD3DFFAC4340ABD6283F /* zxing-all-in-one.h */,
+				F414FCABDF4F4DE4B8DC7AE9 /* CDVDevice.m */,
+				C8027BF21C694700BB33716F /* CDVDevice.h */,
+				57D10916BC9F4B6991D85934 /* SpinnerPlugin.m */,
+				341CE9DDD98A4A66B1B845F9 /* MBProgressHUD.m */,
+				2CE8CEA8F40646EE9B349B9C /* SpinnerPlugin.h */,
+				BFFC8B3DB67C4322AF7FA94D /* MBProgressHUD.h */,
 			);
 			name = Plugins;
 			path = "TIME CHECKER/Plugins";
@@ -329,6 +344,9 @@
 				5BDEA1912E5843E3AEAAACFD /* CDVStatusBar.m in Sources */,
 				BFDDE31530BC453AAFE1C39B /* CDVBarcodeScanner.mm in Resources */,
 				40A206A81DAA43ECB6AF209C /* zxing-all-in-one.cpp in Resources */,
+				55227155D1D7427B80D8B2D3 /* CDVDevice.m in Sources */,
+				DCC45EE339BC4B20829EB640 /* SpinnerPlugin.m in Sources */,
+				378BAD35A7034390BB9DA2B1 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "TIME CHECKER",
+  "short_name": "TIME CHECKER",
+  "version": "com.srhcheck.app",
+  "description": "Aplicacion de Check in / Check out",
+  "author": "Uriel Velasquez",
+  "icons": [],
+  "start_url": "index.html"
+}

@@ -19,6 +19,12 @@
     "phonegap-plugin-barcodescanner": {
       "CAMERA_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "com.srhcheck.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.srhcheck.app"
+    },
+    "cordova-plugin-spinner": {
+      "PACKAGE_NAME": "com.srhcheck.app"
     }
   },
   "dependent_plugins": {}

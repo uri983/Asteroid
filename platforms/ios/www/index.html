@@ -154,14 +154,14 @@
                                     <div class="overlay-gradient">
                                     </div>
                                     <div class="contact profile-user">
-                                        <img alt="" src="img/user7.jpg">
-                                            <h5 class="white-text">
-                                                Uriel Manuel Velasquez Mendez
+                                        <img alt="profile" id="user_photo" src="img/user7.jpg">
+                                            <h5 class="white-text" id="user_name">
+                                                Usuario
                                             </h5>
-                                            <p class="white-text">
-                                                Auxiliar de programación
+                                            <p class="white-text" id="user_puesto">
+                                                Puesto
                                             </p>
-                                            <a class="waves-effect waves-light btn-flat primary-color white-text" id="check">
+                                            <a href="javascript:void(0);" onclick="jCheck.openScan();" class="waves-effect waves-light btn-flat primary-color white-text" id="check">
                                                 CHECAR ENTRADA
                                             </a>
                                         </img>
@@ -185,7 +185,7 @@
                                                         <div class="item-title label">
                                                             EMPRESA
                                                         </div>
-                                                        <p style="font-size: 12px;">
+                                                        <p style="font-size: 12px;" id="user_empresa">
                                                             ACD
                                                         </p>
                                                     </div>
@@ -201,7 +201,23 @@
                                                         <div class="item-title label">
                                                             DEPARTAMENTO
                                                         </div>
-                                                        <p style="font-size: 12px;">
+                                                        <p style="font-size: 12px;" id="user_departamento">
+                                                            SISTEMAS
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media">
+                                                        <i class="mdi mdi-domain">
+                                                        </i>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">
+                                                            SUCURSAL
+                                                        </div>
+                                                        <p style="font-size: 12px;" id="user_sucursal">
                                                             SISTEMAS
                                                         </p>
                                                     </div>
@@ -210,7 +226,7 @@
                                         </ul>
                                     </form>
                                 </div>
-                                <div class="profile-description">
+                                <!--<div class="profile-description">
                                     <h4 class="paragraph-title">
                                         ULTIMOS REGISTROS
                                     </h4>
@@ -246,7 +262,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                         <!-- End of Main Contents -->
@@ -281,7 +297,20 @@
                                             </label>
                                         </input>
                                     </div>
-                                    <a class="waves-effect waves-light btn-large primary-color fullwidth" id="vincular">
+                                    <div class="list-block">
+                                      <ul id="list_empresa">
+                                        
+                                      </ul>
+                                    </div> 
+
+
+                                     
+                                    <a class="waves-effect waves-light btn-large primary-color fullwidth" href="javascript:void(0);" 
+                                    onclick="jAsociate.getInfoAsociate();" id="consultar">
+                                        Consultar
+                                    </a>
+                                    <a style="display: none;" class="waves-effect waves-light btn-large primary-color fullwidth" href="javascript:void(0);" 
+                                    onclick="jAsociate.asociate();" id="vincular">
                                         Vincular
                                     </a>
                                     <span>
@@ -301,10 +330,15 @@
 </script>
 <script src="lib/framework7/js/framework7.min.js" type="text/javascript">
 </script>
-<script src="js/my-app.js" type="text/javascript">
-</script>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js">
 </script>
+<script src="js/asociateController.js" type="text/javascript">
+</script>
+<script src="js/checkinController.js" type="text/javascript">
+</script>
+<script src="js/my-app.js" type="text/javascript">
+</script>
+
 <script src="js/materialize.min.js">
 </script>
 <script src="js/snap.js">
