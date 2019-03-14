@@ -26,6 +26,7 @@
         <preference name="BackupWebStorage" value="none" />
     </platform>
     <preference name="DisallowOverscroll" value="true" />
+    <preference name="Orientation" value="portrait" />
     <engine name="ios" spec="~4.5.2" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
     <plugin name="cordova-plugin-statusbar" spec="~1.0.1" />

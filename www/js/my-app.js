@@ -24,6 +24,7 @@ $$(document).on('deviceready', function() {
     $('#user_sucursal').html(localStorage.sucursal);
     $('#user_photo').attr('src',localStorage.photo);
 
+    
 
     $("#desvincular").on('click',function (e) {
        localStorage.removeItem("curp");

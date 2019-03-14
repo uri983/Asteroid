@@ -44,14 +44,11 @@
         overflow-x: auto; 
     }
     .navbar{
-            background-color: #12294b; 
-       
-        right: 0;
-        left: 0;
+        background-color: #12294b; 
+        
         width: auto;
         height: 50px; 
-        position: absolute;
-        z-index: 99999999;
+        
     }
     .title{
         color: #fff;
@@ -73,9 +70,6 @@
         background: url(../img/background.jpg) no-repeat top right / cover;
     }
 
-    .navbar-on-left .title{
-        transform: translate3d(-200px,0px,0px) !important ; 
-    }
                                                             </style>
                                                         </link>
                                                     </link>
@@ -121,6 +115,21 @@
                             </div>
                         </a>
                     </li>
+                    <li>
+                        <a  href="configuracion.html" class="item-link close-panel" id="configuracion">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <i class="mdi mdi-settings">
+                                    </i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">
+                                        Configuración
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -129,21 +138,25 @@
             <!-- Your main view, should have "view-main" class -->
             <div class="view view-main">
                 <!-- Top Navbar-->
-                <div class="navbar">
-                    <div class="navbar-inner">
-                        <div class="center">
-                            Checador
-                        </div>
-                        <div class="right">
-                            <a class="open-panel link icon-only" href="#">
-                                <i class="icon icon-bars">
-                                </i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                
                 <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
                 <div class="pages">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left">
+                               <a class="open-panel link icon-only" href="#">
+                                    <i class="icon icon-bars">
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="center">
+                                Checador
+                            </div>
+                            <div class="right">
+                                
+                            </div>
+                        </div>
+                    </div>
                     <!-- Page Content -->
                     <div class="page page-on-center z-depth-5" data-page="index" data-view=".main-view" style="top:50px;">
                         <!-- Toolbar -->

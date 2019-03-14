@@ -74,6 +74,18 @@ var jAsociate = function(){
         localStorage.departamento = $('#'+localStorage.idemploye+'_departamento').val();
         localStorage.photo        = $('#'+localStorage.idemploye+'_photo').val();
 
+        var hrs = -(new Date().getTimezoneOffset() / 60);
+        if(hrs == "-5"){
+          hrs=1;
+        }else if(hrs == "-6"){
+          hrs=2;
+        }
+        else if(hrs == "-7"){
+          hrs=3;
+        }else if(hrs == "-8"){
+          hrs=4;
+        }
+        localStorage.timeZone       = hrs;
         $('#user_name').html(localStorage.name);
         $('#user_puesto').html(localStorage.puesto);
         $('#user_empresa').html(localStorage.empresa);
