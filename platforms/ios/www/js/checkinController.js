@@ -40,16 +40,18 @@ var jCheck = function(){
           url       :"https://dev.acdnomina.com.mx/apis/checador/v1/checkin",
           method    :"POST",
           dataType  :"json",
-          data      :{'method':'A',
-                      'token' : code,
+          data      :{'method'    :'A',
+                      'token'     : code,
+                      'idemploye' : localStorage.idemploye,
+                      'device'    : device.platform,
                     },
           success   : function(response){
 
             console.log(response);
             if(response.success == true){
-              myApp.alert('Correcto','Registro guardado bien');
+              myApp.alert('Correcto','Registro guardado con exito');
             }else{ 
-              myApp.alert(response.errors.message,'Error en el registro de E/S');
+              myApp.alert(response.errors.message,'Error en el registro');
             }
 
           },

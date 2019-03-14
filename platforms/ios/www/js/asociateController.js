@@ -4,6 +4,7 @@ var jAsociate = function(){
 
       },
       getInfoAsociate:function(){
+        SpinnerPlugin.activityStart("Consultando datos....");
         var $this = this;
         $$.ajax({
           url       :"https://app.acdnomina.com.mx/apis/checador/v1/asociate",
@@ -11,8 +12,7 @@ var jAsociate = function(){
           dataType  :"json",
           data      :{'curp':$('#CURP').val()},
           success   : function(response){
-
-            console.log(response);
+            SpinnerPlugin.activityStop();
             if(response.counts == 0){
               myApp.alert('Tu curp no esta vinculada a un puesto, para más información contacta a recursos humanos de tu empresa.','Puestos no encontrados');
             }else{
@@ -63,6 +63,7 @@ var jAsociate = function(){
 
       },
       asociate:function(){
+        SpinnerPlugin.activityStart("Vinculando....");
         localStorage.asociate     = 1;
         localStorage.curp         = $('#curp').val();
         localStorage.idemploye    = $('input[name=empresa]:checked').val();
@@ -81,7 +82,7 @@ var jAsociate = function(){
         $('#user_photo').attr('src',localStorage.photo);
 
         myApp.closeModal();
-
+        SpinnerPlugin.activityStop();
 
       },
       closeAsociate:function(){

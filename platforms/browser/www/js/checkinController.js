@@ -43,15 +43,15 @@ var jCheck = function(){
           data      :{'method'    :'A',
                       'token'     : code,
                       'idemploye' : localStorage.idemploye,
-                      //'device'    : device.platform,
+                      'device'    : device.platform,
                     },
           success   : function(response){
 
             console.log(response);
             if(response.success == true){
-              myApp.alert('Correcto','Registro guardado bien');
+              myApp.alert('Correcto','Registro guardado con exito');
             }else{ 
-              myApp.alert(response.errors.message,'Error en el registro de E/S');
+              myApp.alert(response.errors.message,'Error en el registro');
             }
 
           },

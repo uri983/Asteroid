@@ -1,5 +1,6 @@
 var jCheck = function(){
   return {
+
       openScan:function(){
         $this = this;
         cordova.plugins.barcodeScanner.scan(
@@ -35,6 +36,7 @@ var jCheck = function(){
 
       },
       sendData:function(code){
+        SpinnerPlugin.activityStart("Registrando....");
         var $this = this;
         $$.ajax({
           url       :"https://dev.acdnomina.com.mx/apis/checador/v1/checkin",
@@ -46,12 +48,12 @@ var jCheck = function(){
                       'device'    : device.platform,
                     },
           success   : function(response){
-
-            console.log(response);
+            SpinnerPlugin.activityStop();
             if(response.success == true){
               myApp.alert('Correcto','Registro guardado con exito');
             }else{ 
               myApp.alert(response.errors.message,'Error en el registro');
+
             }
 
           },
