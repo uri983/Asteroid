@@ -32,6 +32,8 @@
 		55227155D1D7427B80D8B2D3 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = F414FCABDF4F4DE4B8DC7AE9 /* CDVDevice.m */; };
 		DCC45EE339BC4B20829EB640 /* SpinnerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D10916BC9F4B6991D85934 /* SpinnerPlugin.m */; };
 		378BAD35A7034390BB9DA2B1 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 341CE9DDD98A4A66B1B845F9 /* MBProgressHUD.m */; };
+		5B0B3C00727D4FE18109E813 /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4D5A0EB58340E1B24B6300 /* CDVSplashScreen.m */; };
+		ED9CD665846A4DBEBC3C459A /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 315D5AC0EFAF4D6598B0AC49 /* CDVViewController+SplashScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,10 @@
 		341CE9DDD98A4A66B1B845F9 /* MBProgressHUD.m */ = {isa = PBXFileReference; name = "MBProgressHUD.m"; path = "cordova-plugin-spinner/MBProgressHUD.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		2CE8CEA8F40646EE9B349B9C /* SpinnerPlugin.h */ = {isa = PBXFileReference; name = "SpinnerPlugin.h"; path = "cordova-plugin-spinner/SpinnerPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		BFFC8B3DB67C4322AF7FA94D /* MBProgressHUD.h */ = {isa = PBXFileReference; name = "MBProgressHUD.h"; path = "cordova-plugin-spinner/MBProgressHUD.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6C4D5A0EB58340E1B24B6300 /* CDVSplashScreen.m */ = {isa = PBXFileReference; name = "CDVSplashScreen.m"; path = "cordova-plugin-splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		315D5AC0EFAF4D6598B0AC49 /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		489FB8C3335C4B318C7E69CF /* CDVSplashScreen.h */ = {isa = PBXFileReference; name = "CDVSplashScreen.h"; path = "cordova-plugin-splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		6CC423C85E884A38BF5316F0 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +231,10 @@
 				341CE9DDD98A4A66B1B845F9 /* MBProgressHUD.m */,
 				2CE8CEA8F40646EE9B349B9C /* SpinnerPlugin.h */,
 				BFFC8B3DB67C4322AF7FA94D /* MBProgressHUD.h */,
+				6C4D5A0EB58340E1B24B6300 /* CDVSplashScreen.m */,
+				315D5AC0EFAF4D6598B0AC49 /* CDVViewController+SplashScreen.m */,
+				489FB8C3335C4B318C7E69CF /* CDVSplashScreen.h */,
+				6CC423C85E884A38BF5316F0 /* CDVViewController+SplashScreen.h */,
 			);
 			name = Plugins;
 			path = "TIME CHECKER/Plugins";
@@ -347,6 +357,8 @@
 				55227155D1D7427B80D8B2D3 /* CDVDevice.m in Sources */,
 				DCC45EE339BC4B20829EB640 /* SpinnerPlugin.m in Sources */,
 				378BAD35A7034390BB9DA2B1 /* MBProgressHUD.m in Sources */,
+				5B0B3C00727D4FE18109E813 /* CDVSplashScreen.m in Sources */,
+				ED9CD665846A4DBEBC3C459A /* CDVViewController+SplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

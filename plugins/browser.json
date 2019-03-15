@@ -24,6 +24,9 @@
     },
     "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.srhcheck.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.srhcheck.app"
     }
   },
   "dependent_plugins": {}

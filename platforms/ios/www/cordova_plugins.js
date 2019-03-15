@@ -39,6 +39,14 @@ module.exports = [
     "clobbers": [
       "SpinnerPlugin"
     ]
+  },
+  {
+    "id": "cordova-plugin-splashscreen.SplashScreen",
+    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+    "pluginId": "cordova-plugin-splashscreen",
+    "clobbers": [
+      "navigator.splashscreen"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -49,7 +57,8 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.2.2",
   "phonegap-plugin-barcodescanner": "6.0.8",
   "cordova-plugin-device": "2.0.2",
-  "cordova-plugin-spinner": "1.1.0"
+  "cordova-plugin-spinner": "1.1.0",
+  "cordova-plugin-splashscreen": "5.0.2"
 };
 // BOTTOM OF METADATA
 });

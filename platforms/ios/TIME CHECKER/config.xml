@@ -35,6 +35,10 @@
     <feature name="SpinnerPlugin">
         <param name="ios-package" value="SpinnerPlugin" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <name>TIME CHECKER</name>
     <description>
         Aplicacion de Check in / Check out
