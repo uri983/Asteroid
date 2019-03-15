@@ -1,26 +1,64 @@
 
 
-<div class="pages">
-
-        
+<div class="pages navbar-through">
    
-      
-    <div data-page="configuracion" class="page" style="top:50px;">
-      <div class="navbar-inner">
-            <div class="left">
-                <a href="#" class="back link">
-                    <i class="icon icon-back"></i>
-                </a>
-            </div>
-            <div class="center sliding">CONFIGURACIÓN</div>
-            <div class="right">
-              
-            </div>
+    <div data-page="configuracion" class="page " >
+       <div class="navbar ">
+    <div class="navbar-inner">
+        <div class="left">
+            <a href="#" class="back link">
+                <i class="icon icon-back"></i>
+            </a>
         </div>
+        <div class="center sliding">CONFIGURACIÓN</div>
+        <div class="right">
+           
+        </div>
+    </div>
+</div>
+
+
         <div class="page-content">
-            <div class="content-block">
+            <div class="content-block" style="    margin-top: 50px;">
                 
-                <p>eros lectus, accumsan eget mi vel, iaculis tincidunt felis. Nulla tincidunt pharetra sagittis. Fusce in felis eros. Nulla sit amet aliquam lorem, et gravida ipsum. Mauris consectetur nisl non sollicitudin tristique. Praesent vitae metus ac quam rhoncus mattis vel etisi. Aenean aliquet, felis quis dignissim iaculis, lectus quam tincidunt ligula, et venenatis turpis risus sed lorem. Morbi eu metus elit. Ut vel diam dolor.</p>
+              <div class="container">
+                <div class="profile-description">
+                  <p>
+                    Seleccione la configuración correcta para su dispositivo
+                  </p>
+
+                </div>
+
+                          <div class="list-block">
+                            <ul>
+                              <!-- Smart select item -->
+                              
+                              <li>
+                                <!-- Smart select, will be opened in Picker -->
+                                <a href="#" class="item-link smart-select" data-open-in="picker" data-picker-close-text="Listo">
+                                  <select id="utc" name="zona_horaria">
+                                    <option value="1" >UTC-5</option>
+                                    <option value="2">UTC-6</option>
+                                    <option value="3">UTC-7</option>
+                                    <option value="4">UTC-8</option>
+                                  </select>
+                                  <div class="item-content">
+                                    <div class="item-inner">
+                                      <!-- Select label -->
+                                      <div class="item-title">Zona Horaria</div>
+                                      <!-- Selected value, not required -->
+                                      <div id="utc_selected" class="item-after"></div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+    <li>
+                              <!-- Another smart selects or list view elements -->
+                            </ul>
+                          </div> 
+
+              </div>
+
             </div>
         </div>
     </div>

@@ -44,11 +44,8 @@
         overflow-x: auto; 
     }
     .navbar{
-        background-color: #12294b; 
-        
-        width: auto;
-        height: 50px; 
-        
+            background-color: #12294b; 
+    
     }
     .title{
         color: #fff;
@@ -70,6 +67,25 @@
         background: url(../img/background.jpg) no-repeat top right / cover;
     }
 
+    .navbar-on-left .title{
+        transform: translate3d(-200px,0px,0px) !important ; 
+    }
+
+    .navbar-inner .navbar-on-center{
+        position: absolute !important;
+    }
+
+    .navbar-inner .navbar-on-left{
+        position: fixed !important; 
+    }
+
+    .toolbar-inner{
+       background-color: #12294b; 
+       color: white !important; 
+    }
+    .close-picker span{
+            color: white !important;
+    }
                                                             </style>
                                                         </link>
                                                     </link>
@@ -136,29 +152,26 @@
         <!-- Views -->
         <div class="views">
             <!-- Your main view, should have "view-main" class -->
-            <div class="view view-main">
+            <div class="view view-main tab active">
                 <!-- Top Navbar-->
                 
                 <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
-                <div class="pages">
-                    <div class="navbar">
-                        <div class="navbar-inner">
-                            <div class="left">
-                               <a class="open-panel link icon-only" href="#">
-                                    <i class="icon icon-bars">
-                                    </i>
-                                </a>
-                            </div>
-                            <div class="center">
-                                Checador
-                            </div>
-                            <div class="right">
-                                
+                <div class="pages navbar-through toolbar-through">
+                    <!-- Page Content -->
+                    <div class="page page-on-center z-depth-5" data-page="index" data-view=".main-view" >
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="center">
+                                    CHECADOR
+                                </div>
+                                <div class="right">
+                                    <a class="open-panel link icon-only" href="#">
+                                        <i class="icon icon-bars">
+                                        </i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Page Content -->
-                    <div class="page page-on-center z-depth-5" data-page="index" data-view=".main-view" style="top:50px;">
                         <!-- Toolbar -->
                         <div class="scene_element scene_element--fadeinup page-content">
                             <!-- Profile HEader -->

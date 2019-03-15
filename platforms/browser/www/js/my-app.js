@@ -1,5 +1,8 @@
 // Initialize app
-var myApp = new Framework7({swipeBackPage:false,swipePanel:false});
+var myApp = new Framework7({pushState    : true,
+  swipeBackPage:false,
+  swipePanel   :false,
+  material     : true,});
 
 
 // If we need to use custom DOM library, let's save it to $$ variable:
@@ -24,7 +27,7 @@ $$(document).on('deviceready', function() {
     $('#user_sucursal').html(localStorage.sucursal);
     $('#user_photo').attr('src',localStorage.photo);
 
-    
+
 
     $("#desvincular").on('click',function (e) {
        localStorage.removeItem("curp");
@@ -46,6 +49,20 @@ myApp.onPageInit('index', function (page) {
          
 
 }).trigger();
+
+myApp.onPageInit('configuracion', function (page) {
+
+    $('#utc').val(localStorage.timeZone);
+    $('#utc_selected').html($("#utc option:selected").text());
+    
+    $('#utc').on('change',function(){
+       localStorage.timeZone = $('#utc').val();
+    });
+
+    
+    
+
+});
 
 myApp.onPageInit('login', function (page) {
     $('.navbar').css('background-color','rgba(18, 41, 75, 0)');
