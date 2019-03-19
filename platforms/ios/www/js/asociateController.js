@@ -13,46 +13,52 @@ var jAsociate = function(){
           data      :{'curp':$('#CURP').val()},
           success   : function(response){
             SpinnerPlugin.activityStop();
-            if(response.counts == 0){
-              myApp.alert('Tu curp no esta vinculada a un puesto, para más información contacta a recursos humanos de tu empresa.','Puestos no encontrados');
+
+            if(response.success == true){
+
+              if(response.counts == 0){
+                myApp.alert('Tu curp no esta vinculada a un puesto, para más información contacta a recursos humanos de tu empresa.','Puestos no encontrados');
+              }else{
+                var html = "";
+                    $.each(response.data,function(index,value){
+
+                    html+="<li>";
+                    html+="<label class=\"label-radio item-content\">";
+                    html+="<input type=\"radio\" name=\"empresa\" value=\""+value.idemploye+"\">";
+
+                    html+="<div class=\"item-media\">";
+                    html+="<i class=\"icon icon-form-radio\"></i>";
+                    html+=" </div>";
+
+                    html+="<div class=\"item-inner\">";
+                    html+="<div class=\"item-title-row\">";
+                    html+="<div class=\"item-text\">"+value.empresa+"</div>";
+                    html+="<div class=\"item-subtitle\">"+value.puesto+"</div>";
+                    html+="<div class=\"item-title\">"+value.name+" "+value.lastname+"</div>";
+                    html+="</div>";
+
+                    html+="</div>";
+                    html+="</label>";
+                    html+="</li>";
+
+                    html+="<input type=\"hidden\" id=\""+value.idemploye+"_nombre\" value=\""+value.name+" "+value.lastname+"\">";
+                    html+="<input type=\"hidden\" id=\""+value.idemploye+"_puesto\" value=\""+value.puesto+"\">";
+                    html+="<input type=\"hidden\" id=\""+value.idemploye+"_empresa\" value=\""+value.empresa+"\">";
+                    html+="<input type=\"hidden\" id=\""+value.idemploye+"_departamento\" value=\""+value.departamento+"\">";
+                    html+="<input type=\"hidden\" id=\""+value.idemploye+"_sucursal\" value=\""+value.sucursal+"\">";
+                    html+="<input type=\"hidden\" id=\""+value.idemploye+"_photo\" value=\""+value.photo+"\">";
+
+
+
+                  });
+
+                  $('#list_empresa').html(html);
+                  $('#consultar').hide();
+                  $('#vincular').show();
+                
+              }
             }else{
-              var html = "";
-              $.each(response.data,function(index,value){
-
-                  html+="<li>";
-                  html+="<label class=\"label-radio item-content\">";
-                  html+="<input type=\"radio\" name=\"empresa\" value=\""+value.idemploye+"\">";
-
-                  html+="<div class=\"item-media\">";
-                  html+="<i class=\"icon icon-form-radio\"></i>";
-                  html+=" </div>";
-
-                  html+="<div class=\"item-inner\">";
-                  html+="<div class=\"item-title-row\">";
-                  html+="<div class=\"item-text\">"+value.empresa+"</div>";
-                  html+="<div class=\"item-subtitle\">"+value.puesto+"</div>";
-                  html+="<div class=\"item-title\">"+value.name+" "+value.lastname+"</div>";
-                  html+="</div>";
-
-                  html+="</div>";
-                  html+="</label>";
-                  html+="</li>";
-
-                  html+="<input type=\"hidden\" id=\""+value.idemploye+"_nombre\" value=\""+value.name+" "+value.lastname+"\">";
-                  html+="<input type=\"hidden\" id=\""+value.idemploye+"_puesto\" value=\""+value.puesto+"\">";
-                  html+="<input type=\"hidden\" id=\""+value.idemploye+"_empresa\" value=\""+value.empresa+"\">";
-                  html+="<input type=\"hidden\" id=\""+value.idemploye+"_departamento\" value=\""+value.departamento+"\">";
-                  html+="<input type=\"hidden\" id=\""+value.idemploye+"_sucursal\" value=\""+value.sucursal+"\">";
-                  html+="<input type=\"hidden\" id=\""+value.idemploye+"_photo\" value=\""+value.photo+"\">";
-
-
-
-              });
-
-              $('#list_empresa').html(html);
-              $('#consultar').hide();
-              $('#vincular').show();
- 
+              myApp.alert(response.errors.message,'Error');
             }
 
           },

@@ -1,0 +1,33 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    },
+    "cordova-plugin-spinner": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    }
+  },
+  "dependent_plugins": {}
+}

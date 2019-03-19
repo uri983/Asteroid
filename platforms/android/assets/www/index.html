@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+            -->
+        <!-- Required meta tags-->
+        <meta charset="utf-8">
+            <meta content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui" name="viewport">
+                <meta content="yes" name="apple-mobile-web-app-capable">
+                    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+                        <meta content="telephone=no" name="format-detection">
+                            <meta content="no" name="msapplication-tap-highlight">
+                                <!-- Your app title -->
+                                <title>
+                                    CHECADOR
+                                </title>
+                                <!-- This template defaults to the iOS CSS theme. To support both iOS and material design themes, see the Framework7 Tutorial at the link below:
+        http://www.idangero.us/framework7/tutorials/maintain-both-ios-and-material-themes-in-single-app.html
+    -->
+                                <link href="lib/framework7/css/framework7.material.min.css" rel="stylesheet">
+                                    <link href="lib/framework7/css/framework7.material.colors.min.css" rel="stylesheet">
+                                        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+                                            <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+                                                <link href="css/keyframes.css" rel="stylesheet" type="text/css">
+                                                    <link href="css/materialize.min.css" rel="stylesheet" type="text/css">
+                                                        <link href="css/style.css" rel="stylesheet" type="text/css">
+                                                            <!-- <link rel="stylesheet" href="css/styles.css"> -->
+                                                            <style type="text/css">
+                                                                body{
+        overflow: scroll !important;
+        height: 100%;
+    }
+    html {
+        position: relative;
+        /*height: auto; */
+        width: 100%;
+        overflow-x: auto; 
+    }
+    .navbar{
+            background-color: #12294b; 
+    
+    }
+    .title{
+        color: #fff;
+        font-size: 1.5em;
+        left: 0;
+    }
+      .login {
+    
+    min-height: calc(100vh - 0px);
+    background: url(img/profile.jpg) no-repeat top right / cover;
+    
+}
+    .open-left{
+        height: auto;
+    }
+
+    .panel-left{
+
+        background: url(../img/background.jpg) no-repeat top right / cover;
+    }
+
+    .navbar-on-left .title{
+        transform: translate3d(-200px,0px,0px) !important ; 
+    }
+
+    .navbar-inner .navbar-on-center{
+        position: absolute !important;
+    }
+
+    .navbar-inner .navbar-on-left{
+        position: fixed !important; 
+    }
+
+    .toolbar-inner{
+       background-color: #12294b; 
+       color: white !important; 
+    }
+    .close-picker span{
+            color: white !important;
+    }
+                                                            </style>
+                                                        </link>
+                                                    </link>
+                                                </link>
+                                            </link>
+                                        </link>
+                                    </link>
+                                </link>
+                            </meta>
+                        </meta>
+                    </meta>
+                </meta>
+            </meta>
+        </meta>
+    </head>
+    <body>
+        <!-- Status bar overlay for full screen mode (PhoneGap) -->
+        <div class="statusbar-overlay">
+        </div>
+        <!-- Panels overlay-->
+        <div class="panel-overlay">
+        </div>
+        <!-- Left panel with reveal effect-->
+        <div class="panel panel-left panel-cover layout-dark " style="display: block; background-image: url(img/profile.jpg); color: white;">
+            <div class="content-block-title">
+                MENU
+            </div>
+            
+            <div class="list-block">
+                <ul>
+                    <li>
+                        <a class="item-link close-panel" id="desvincular">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <i class="mdi mdi-do-not-disturb">
+                                    </i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">
+                                        Desvincular
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a  href="configuracion.html" class="item-link close-panel" id="configuracion">
+                            <div class="item-content">
+                                <div class="item-media">
+                                    <i class="mdi mdi-settings">
+                                    </i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title">
+                                        Configuración
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Views -->
+        <div class="views">
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main tab active">
+                <!-- Top Navbar-->
+                
+                <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+                <div class="pages navbar-through toolbar-through">
+                    <!-- Page Content -->
+                    <div class="page page-on-center z-depth-5" data-page="index" data-view=".main-view" >
+                        <div class="navbar">
+                            <div class="navbar-inner">
+                                <div class="left">
+                                    <img src="img/logo-light-cloud.png" style="width: 60px; margin-left: 5px;">
+                                </div>
+                                <div class="center">
+                                    CHECADOR
+                                </div>
+                                <div class="right">
+                                    <a class="open-panel link icon-only" href="#">
+                                        <i class="icon icon-bars">
+                                        </i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Toolbar -->
+                        <div class="scene_element scene_element--fadeinup page-content">
+                            <!-- Profile HEader -->
+                            <div class="profile-header">
+                                <img alt="" src="img/profile.jpg">
+                                    <div class="overlay-gradient">
+                                    </div>
+                                    <div class="contact profile-user">
+                                        <img alt="profile" id="user_photo" src="img/user7.jpg">
+                                            <h5 class="white-text" id="user_name">
+                                                Usuario
+                                            </h5>
+                                            <p class="white-text" id="user_puesto">
+                                                Puesto
+                                            </p>
+                                            <a href="javascript:void(0);" onclick="jCheck.openScan();" class="waves-effect waves-light btn-flat primary-color white-text" id="check">
+                                                CHECAR ENTRADA
+                                            </a>
+                                        </img>
+                                    </div>
+                                </img>
+                            </div>
+                            <div class="container">
+                                <div class="profile-description">
+                                    <h4 class="paragraph-title">
+                                        DATOS DE USUARIO
+                                    </h4>
+                                    <form class="list-block inputs-list">
+                                        <ul>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media">
+                                                        <i class="mdi mdi-domain">
+                                                        </i>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">
+                                                            EMPRESA
+                                                        </div>
+                                                        <p style="font-size: 12px;" id="user_empresa">
+                                                            ACD
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media">
+                                                        <i class="mdi mdi-domain">
+                                                        </i>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">
+                                                            DEPARTAMENTO
+                                                        </div>
+                                                        <p style="font-size: 12px;" id="user_departamento">
+                                                            SISTEMAS
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media">
+                                                        <i class="mdi mdi-domain">
+                                                        </i>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">
+                                                            SUCURSAL
+                                                        </div>
+                                                        <p style="font-size: 12px;" id="user_sucursal">
+                                                            SISTEMAS
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </form>
+                                </div>
+                                <!--<div class="profile-description">
+                                    <h4 class="paragraph-title">
+                                        ULTIMOS REGISTROS
+                                    </h4>
+                                    <div class="timeline">
+                                        <div class="row">
+                                            <div class="col s12">
+                                                <div class="contact">
+                                                    <span class="date">
+                                                        9 AM
+                                                    </span>
+                                                    <div class="dot border-sea">
+                                                    </div>
+                                                    <p>
+                                                        ENTRADA
+                                                    </p>
+                                                    <span>
+                                                        16 Octubre 2017.
+                                                    </span>
+                                                </div>
+                                                <div class="contact">
+                                                    <span class="date">
+                                                        4 PM
+                                                    </span>
+                                                    <div class="dot border-coral">
+                                                    </div>
+                                                    <p>
+                                                        SALIDA
+                                                    </p>
+                                                    <span>
+                                                        16 Octubre 2017.
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                        <!-- End of Main Contents -->
+                    </div>
+                    <!-- End of Page Content -->
+                </div>
+            </div>
+            <div class="login-screen modal-in">
+                <div class="page page-on-center snap-content z-depth-5" data-page="login" data-view=".main-view" style="top:0;">
+                    <!-- Toolbar -->
+                    <!-- Main Content -->
+                    <div class="navbar" style="background-color: rgba(18, 41, 75, 0);">
+                    </div>
+                    <div class="scene_element login valign-wrapper scene_element--fadeinright page-content">
+                        <div class="valign">
+                            <div class="container">
+                                <div class="profile-header">
+                                    <div class="contact profile-user">
+                                        <!--<img alt="" class="z-depth-1" src="img/user8.jpg">-->
+                                        <h4 style="color: white;">
+                                            Vincular dispositivo
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="container white z-depth-2">
+                                    <div class="input-field col s12">
+                                        <i class="mdi mdi-account-circle prefix">
+                                        </i>
+                                        <input class="validate" id="CURP" style="color: black;" maxlength="18" onkeyup="this.value = this.value.toUpperCase();"  type="text">
+                                            <label for="login">
+                                                CURP
+                                            </label>
+                                        </input>
+                                    </div>
+                                    <div class="list-block">
+                                      <ul id="list_empresa">
+                                        
+                                      </ul>
+                                    </div> 
+
+
+                                     
+                                    <a class="waves-effect waves-light btn-large primary-color fullwidth" href="javascript:void(0);" 
+                                    onclick="jAsociate.getInfoAsociate();" id="consultar">
+                                        Consultar
+                                    </a>
+                                    <a style="display: none;" class="waves-effect waves-light btn-large primary-color fullwidth" href="javascript:void(0);" 
+                                    onclick="jAsociate.asociate();" id="vincular">
+                                        Vincular
+                                    </a>
+                                    <span>
+                                        
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End of Main Contents -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="cordova.js" type="text/javascript">
+</script>
+<script src="lib/framework7/js/framework7.min.js" type="text/javascript">
+</script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js">
+</script>
+<script src="js/asociateController.js" type="text/javascript">
+</script>
+<script src="js/checkinController.js" type="text/javascript">
+</script>
+<script src="js/my-app.js" type="text/javascript">
+</script>
+
+<script src="js/materialize.min.js">
+</script>
+<script src="js/snap.js">
+</script>
