@@ -39,7 +39,7 @@ var jCheck = function(){
         SpinnerPlugin.activityStart("Registrando....");
         var $this = this;
         $$.ajax({
-          url       :"https://dev.acdnomina.com.mx/apis/checador/v1/checkin",
+          url       :"https://app.acdnomina.com.mx/apis/checador/v1/checkin",
           method    :"POST",
           dataType  :"json",
           data      :{'method'    :'A',
