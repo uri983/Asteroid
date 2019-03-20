@@ -84,6 +84,6 @@
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <plugin name="cordova-plugin-spinner" spec="^1.1.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
-    <plugin name="org.apache.cordova.geolocation" spec="2.4.3" />
+    <plugin name="org.apache.cordova.geolocation" spec="^0.3.6" />
     <plugin name="cordova-plugin-whitelist" spec="~1.2.0" />
 </widget>
