@@ -67,6 +67,12 @@
         <splash height="960" platform="ios" src="res/screens/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="res/screens/ios/Default~iphone.png" width="320" />
     </platform>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.GeoBroker" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
     <engine name="ios" spec="~4.5.2" />
@@ -79,4 +85,5 @@
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <plugin name="cordova-plugin-spinner" spec="^1.1.0" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
+    <plugin name="org.apache.cordova.geolocation" spec="^0.3.6" />
 </widget>

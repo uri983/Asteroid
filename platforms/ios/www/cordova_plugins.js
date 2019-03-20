@@ -58,7 +58,8 @@ module.exports.metadata =
   "phonegap-plugin-barcodescanner": "6.0.8",
   "cordova-plugin-device": "2.0.2",
   "cordova-plugin-spinner": "1.1.0",
-  "cordova-plugin-splashscreen": "5.0.2"
+  "cordova-plugin-splashscreen": "5.0.2",
+  "org.apache.cordova.geolocation": "0.3.6"
 };
 // BOTTOM OF METADATA
 });

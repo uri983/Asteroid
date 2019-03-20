@@ -42,6 +42,9 @@
         },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.srhcheck.app"
+        },
+        "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "com.acdqrtimechecker.app"
         }
     },
     "dependent_plugins": {},
@@ -128,6 +131,7 @@
         "phonegap-plugin-barcodescanner": "6.0.8",
         "cordova-plugin-device": "2.0.2",
         "cordova-plugin-spinner": "1.1.0",
-        "cordova-plugin-splashscreen": "5.0.2"
+        "cordova-plugin-splashscreen": "5.0.2",
+        "org.apache.cordova.geolocation": "0.3.6"
     }
 }

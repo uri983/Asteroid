@@ -27,6 +27,9 @@
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.srhcheck.app"
+    },
+    "org.apache.cordova.geolocation": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
     }
   },
   "dependent_plugins": {}

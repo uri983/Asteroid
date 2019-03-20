@@ -15,7 +15,8 @@
       "cordova-plugin-dialogs": {},
       "cordova-plugin-device": {},
       "cordova-plugin-spinner": {},
-      "cordova-plugin-splashscreen": {}
+      "cordova-plugin-splashscreen": {},
+      "org.apache.cordova.geolocation": {}
     }
   },
   "dependencies": {
@@ -29,6 +30,7 @@
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "~1.0.1",
     "cordova-plugin-whitelist": "~1.2.0",
+    "org.apache.cordova.geolocation": "^0.3.6",
     "phonegap-plugin-barcodescanner": "~6.0.8"
   }
 }
