@@ -45,7 +45,7 @@ var jCheck = function(){
           data      :{'method'    :'A',
                       'token'     : code,
                       'idemploye' : localStorage.idemploye,
-                      'device'    : device.platform,
+                      'device'    : device.uuid,
                       'UTC'       : localStorage.timeZone,
                     },
           success   : function(response){
