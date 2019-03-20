@@ -35,7 +35,7 @@ $$(document).on('deviceready', function() {
         
     })
 
-    var options = { enableHighAccuracy: true , timeout: 2*1000, maximumAge: 0 };
+    var options = { enableHighAccuracy: true};
     
     navigator.geolocation.getCurrentPosition(onSuccess, onError,options);
     
@@ -75,7 +75,7 @@ myApp.onPageInit('login', function (page) {
 
 
 function onSuccess(position) {
-    var element  = document.getElementById('geolocation');
+    //var element  = document.getElementById('geolocation');
     var    datos = 'Latitude: '           + position.coords.latitude              + '<br />' +
                    'Longitude: '          + position.coords.longitude             + '<br />' +
                    'Altitude: '           + position.coords.altitude              + '<br />' +
