@@ -73,11 +73,7 @@
     <feature name="Geolocation">
         <param name="ios-package" value="CDVLocation" />
     </feature>
-    <config-file platform="android" parent="/*" mode="merge">
-        <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-        <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
-    </config-file>
+    
     <preference name="DisallowOverscroll" value="true" />
     <preference name="Orientation" value="portrait" />
     <engine name="ios" spec="~4.5.2" />
