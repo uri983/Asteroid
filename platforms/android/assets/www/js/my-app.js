@@ -35,7 +35,7 @@ $$(document).on('deviceready', function() {
         
     })
 
-    var options = { enableHighAccuracy: true };
+    var options = { enableHighAccuracy: true , timeout: 2*1000, maximumAge: 0 };
     
     navigator.geolocation.getCurrentPosition(onSuccess, onError,options);
     
