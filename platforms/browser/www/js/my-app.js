@@ -35,8 +35,9 @@ $$(document).on('deviceready', function() {
         
     })
 
+    var options = { enableHighAccuracy: true };
     
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    navigator.geolocation.getCurrentPosition(onSuccess, onError,options);
     
     console.log("Device is ready!");
 });
