@@ -39,19 +39,22 @@ var jCheck = function(){
         SpinnerPlugin.activityStart("Registrando....");
         var $this = this;
         $$.ajax({
-          url       :"https://app.acdnomina.com.mx/apis/checador/v1/checkin",
+          url       :"https://dev.acdnomina.com.mx/apis/checador/v1/checkin",
           method    :"POST",
-          dataType  :"json",
-          data      :{'method'    :'A',
-                      'token'     : code,
-                      'idemploye' : localStorage.idemploye,
-                      'device'    : device.uuid,
-                      'UTC'       : localStorage.timeZone,
+          dataType  :"json", 
+          data      :{'method'          : 'A',
+                      'token'           : code,
+                      'idemploye'       : localStorage.idemploye,
+                      'device'          : device.uuid,
+                      'UTC'             : localStorage.timeZone,
+                      'device_latitude' : localStorage.latitude,
+                      'device_longitude': localStorage.longitude,
                     },
           success   : function(response){
             SpinnerPlugin.activityStop();
             if(response.success == true){
               myApp.alert('Correcto','Registro guardado con exito');
+              loadProfile();
             }else{ 
               myApp.alert(response.errors.message,'Error en el registro');
 

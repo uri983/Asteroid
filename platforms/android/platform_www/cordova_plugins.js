@@ -57,36 +57,18 @@ module.exports = [
     ]
   },
   {
-    "id": "org.apache.cordova.geolocation.Coordinates",
-    "file": "plugins/org.apache.cordova.geolocation/www/Coordinates.js",
-    "pluginId": "org.apache.cordova.geolocation",
-    "clobbers": [
-      "Coordinates"
-    ]
-  },
-  {
-    "id": "org.apache.cordova.geolocation.PositionError",
-    "file": "plugins/org.apache.cordova.geolocation/www/PositionError.js",
-    "pluginId": "org.apache.cordova.geolocation",
-    "clobbers": [
-      "PositionError"
-    ]
-  },
-  {
-    "id": "org.apache.cordova.geolocation.Position",
-    "file": "plugins/org.apache.cordova.geolocation/www/Position.js",
-    "pluginId": "org.apache.cordova.geolocation",
-    "clobbers": [
-      "Position"
-    ]
-  },
-  {
-    "id": "org.apache.cordova.geolocation.geolocation",
-    "file": "plugins/org.apache.cordova.geolocation/www/geolocation.js",
-    "pluginId": "org.apache.cordova.geolocation",
+    "id": "cordova-plugin-geolocation.geolocation",
+    "file": "plugins/cordova-plugin-geolocation/www/android/geolocation.js",
+    "pluginId": "cordova-plugin-geolocation",
     "clobbers": [
       "navigator.geolocation"
     ]
+  },
+  {
+    "id": "cordova-plugin-geolocation.PositionError",
+    "file": "plugins/cordova-plugin-geolocation/www/PositionError.js",
+    "pluginId": "cordova-plugin-geolocation",
+    "runs": true
   }
 ];
 module.exports.metadata = 
@@ -99,7 +81,8 @@ module.exports.metadata =
   "cordova-plugin-statusbar": "1.0.1",
   "cordova-plugin-whitelist": "1.2.2",
   "phonegap-plugin-barcodescanner": "6.0.8",
-  "org.apache.cordova.geolocation": "0.3.6"
+  "cordova-plugin-geolocation": "4.0.1",
+  "cordova-android-support-gradle-release": "2.0.1"
 };
 // BOTTOM OF METADATA
 });

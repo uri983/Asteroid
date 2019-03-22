@@ -79,6 +79,10 @@
         position: fixed !important; 
     }
 
+    .center-table{
+        text-align: center;
+    }
+
     .toolbar-inner{
        background-color: #12294b; 
        color: white !important; 
@@ -255,43 +259,52 @@
                                         </ul>
                                     </form>
                                 </div>
-                                <!--<div class="profile-description">
-                                    <h4 class="paragraph-title">
-                                        ULTIMOS REGISTROS
+                                <div class="data-table ">
+                                    <h4 class="paragraph-title" id="HORARIO_DES">
+                                        HORARIO
                                     </h4>
-                                    <div class="timeline">
-                                        <div class="row">
-                                            <div class="col s12">
-                                                <div class="contact">
-                                                    <span class="date">
-                                                        9 AM
-                                                    </span>
-                                                    <div class="dot border-sea">
-                                                    </div>
-                                                    <p>
-                                                        ENTRADA
-                                                    </p>
-                                                    <span>
-                                                        16 Octubre 2017.
-                                                    </span>
-                                                </div>
-                                                <div class="contact">
-                                                    <span class="date">
-                                                        4 PM
-                                                    </span>
-                                                    <div class="dot border-coral">
-                                                    </div>
-                                                    <p>
-                                                        SALIDA
-                                                    </p>
-                                                    <span>
-                                                        16 Octubre 2017.
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>-->
+                                    <table>
+                                        <thead>
+                                          <tr>
+                                            <th class="label-cell center-table">Entrada</th>
+                                            <th class="numeric-cell center-table">Salida</th>
+                                        
+                                           
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td class="label-cell center-table"   id="horario_entrada"> </td>
+                                            <td class="numeric-cell center-table" id="horario_salida">  </td>
+                                          </tr>
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="data-table ">
+                                    <h4 class="paragraph-title" id="REGISTROS_DES">
+                                        REGISTROS
+                                    </h4>
+                                    <table>
+                                        <thead>
+                                          <tr>
+                                            <th class="label-cell center-table">Fecha</th>
+                                            <th class="numeric-cell center-table">Hora</th>
+                                        
+                                           
+                                          </tr>
+                                        </thead>
+                                        <tbody id="regi_body">
+                                          
+                                          
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div style="margin-bottom: 100px;">
+                                   
+                                </div>
                             </div>
                         </div>
                         <!-- End of Main Contents -->
@@ -375,9 +388,9 @@
 
 <script type="text/javascript">
     
-    
 
 
 
-    
+
+
 </script>

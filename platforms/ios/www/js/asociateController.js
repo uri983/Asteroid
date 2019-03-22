@@ -98,6 +98,7 @@ var jAsociate = function(){
         $('#user_departamento').html(localStorage.departamento);
         $('#user_sucursal').html(localStorage.sucursal);
         $('#user_photo').attr('src',localStorage.photo);
+        loadProfile();
 
         myApp.closeModal();
         SpinnerPlugin.activityStop();

@@ -1,0 +1,18 @@
+{
+     "android": {
+         "debug": {
+             "keystore": "timeCheckerAcd.keystore",
+             "storePassword": "acdqr10",
+             "alias": "acdQR",
+             "password" : "acdqr10",
+             "keystoreType": ""
+         },
+         "release": {
+              "keystore": "timeCheckerAcd.keystore",
+             "storePassword": "acdqr10",
+             "alias": "acdQR",
+             "password" : "acdqr10",
+             "keystoreType": ""
+         }
+     }
+ }

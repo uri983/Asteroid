@@ -29,7 +29,10 @@
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.srhcheck.app"
     },
-    "org.apache.cordova.geolocation": {
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    },
+    "cordova-android-support-gradle-release": {
       "PACKAGE_NAME": "com.acdqrtimechecker.app"
     }
   },

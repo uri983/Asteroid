@@ -39,6 +39,9 @@
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="Geolocation">
+        <param name="ios-package" value="CDVLocation" />
+    </feature>
     <name>TIME CHECKER</name>
     <description>
         Aplicacion de Check in / Check out

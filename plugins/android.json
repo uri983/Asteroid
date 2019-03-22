@@ -28,7 +28,11 @@
     "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.acdqrtimechecker.app"
     },
-    "org.apache.cordova.geolocation": {
+    "cordova-plugin-geolocation": {
+      "PACKAGE_NAME": "com.acdqrtimechecker.app"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
       "PACKAGE_NAME": "com.acdqrtimechecker.app"
     }
   },
