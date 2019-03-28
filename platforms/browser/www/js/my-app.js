@@ -31,12 +31,31 @@ $$(document).on('deviceready', function() {
 
 
     $("#desvincular").on('click',function (e) {
-       localStorage.removeItem("curp");
-       $('#CURP').val('');
-       $('#list_empresa').html('');
-       $('#consultar').show();
-       $('#vincular').hide();
-       myApp.loginScreen();
+       myApp.modal({
+        title:'¿Deseas desvincular este dispositivo',
+        text:'Podras volver a vincular tu dispositivo cuando quieras',
+        buttons:[
+          {
+            text:'Cancelar'
+          },
+          {
+            text:'Desvincular',
+            bold: true,
+            onClick:function(){
+
+              localStorage.removeItem("curp");
+               $('#CURP').val('');
+               $('#list_empresa').html('');
+               $('#consultar').show();
+               $('#vincular').hide();
+               $('#empr_message').hide();
+               myApp.loginScreen();
+
+            }
+          },
+        ],
+       });
+       
         
     })
 
@@ -93,7 +112,7 @@ function loadProfile(){
 
         var $this = this;
         $$.ajax({
-          url       :"http://dev.acdnomina.com.mx/apis/checador/v1/dataemploye",
+          url       :"https://app.acdnomina.com.mx/apis/checador/v1/dataemploye",
           method    :"GET",
           dataType  :"json", 
           data      :{'Fecha'               : today,
@@ -103,35 +122,50 @@ function loadProfile(){
                       'CredencialVersion'   : 1,
                     },
           success   : function(response){
+            
+
+             $('#HORARIO_DES').html('Horario del '+ dias[day-1] +' '+ dd+' de ' + mes[parseInt(mm)+1] + ' de '+ yyyy );
+              $('#REGISTROS_DES').html('Registros del '+ dias[day-1] +' '+ dd+' de ' + mes[parseInt(mm)+1] + ' de '+ yyyy );
              if(response.Descanso == false){
               
-              var entrada = response.Entrada.substring(0,5);
-              var salida  = response.Salida.substring(0,5);
+                            
+                            
+                            var html ="";
+                            var html_horario ="";
+                            
+                            $.each(response.Horario,function(index,value){
 
-              $('#horario_entrada').html(entrada);
-              $('#horario_salida').html(salida);
-              $('#date_entrada').html(todayFormat);
-              $('#date_salida').html(todayFormat);
-              $('#HORARIO_DES').html('Horario del '+ dias[day-1] +' '+ dd+' de ' + mes[parseInt(mm)+1] + ' de '+ yyyy );
-              $('#REGISTROS_DES').html('Registros del '+ dias[day-1] +' '+ dd+' de ' + mes[parseInt(mm)+1] + ' de '+ yyyy );
-              var html ="";
-              $.each(response.Registros,function(index,value){
+                              
 
-                html+= "<tr>";
-                html+= " <td class=\"label-cell center-table\"  > "+ todayFormat +" </td>";
-                html+= " <td class=\"numeric-cell center-table\" > "+ value + "</td>";
-                html+= "</tr>"
+                              html_horario+= "<tr>";
+                              html_horario+= " <td class=\"label-cell center-table\"  > "+ value.Entrada.substring(0,5) +" </td>";
+                              html_horario+= " <td class=\"numeric-cell center-table\" > "+ value.Salida.substring(0,5) + "</td>";
+                              html_horario+= "</tr>"
 
-              });
+                            });
 
-              $('#regi_body').html(html);
+
+
+                            $.each(response.Registros,function(index,value){
+
+                              html+= "<tr>";
+                              html+= " <td class=\"label-cell center-table\"  > "+ todayFormat +" </td>";
+                              html+= " <td class=\"numeric-cell center-table\" > "+ value + "</td>";
+                              html+= "</tr>"
+
+                            });
+
+                            $('#regi_body').html(html);
+                             $('#hori_body').html(html_horario);
+              
 
 
               
 
 
              }else{
-
+                          $('#horario_entrada').html('Descanso');
+                          $('#horario_salida').html('Descanso');
              }
           },
           error     :function(xhr,status){

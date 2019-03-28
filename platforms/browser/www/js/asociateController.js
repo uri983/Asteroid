@@ -53,6 +53,7 @@ var jAsociate = function(){
                   });
 
                   $('#list_empresa').html(html);
+                  $('#empr_message').show();
                   $('#consultar').hide();
                   $('#vincular').show();
                 

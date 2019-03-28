@@ -83,6 +83,12 @@
         text-align: center;
     }
 
+    @media (max-width: 400px) {
+      .profile-header {
+        margin-top: 50px;
+      }
+    }    
+
     .toolbar-inner{
        background-color: #12294b; 
        color: white !important; 
@@ -227,23 +233,7 @@
                                             <li>
                                                 <div class="item-content">
                                                     <div class="item-media">
-                                                        <i class="mdi mdi-domain">
-                                                        </i>
-                                                    </div>
-                                                    <div class="item-inner">
-                                                        <div class="item-title label">
-                                                            DEPARTAMENTO
-                                                        </div>
-                                                        <p style="font-size: 12px;" id="user_departamento">
-                                                            SISTEMAS
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="item-content">
-                                                    <div class="item-media">
-                                                        <i class="mdi mdi-domain">
+                                                        <i class="mdi mdi-city">
                                                         </i>
                                                     </div>
                                                     <div class="item-inner">
@@ -256,6 +246,23 @@
                                                     </div>
                                                 </div>
                                             </li>
+                                            <li>
+                                                <div class="item-content">
+                                                    <div class="item-media">
+                                                        <i class="mdi mdi-store">
+                                                        </i>
+                                                    </div>
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">
+                                                            DEPARTAMENTO
+                                                        </div>
+                                                        <p style="font-size: 12px;" id="user_departamento">
+                                                            SISTEMAS
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            
                                         </ul>
                                     </form>
                                 </div>
@@ -272,7 +279,7 @@
                                            
                                           </tr>
                                         </thead>
-                                        <tbody>
+                                        <tbody id="hori_body">
                                           <tr>
                                             <td class="label-cell center-table"   id="horario_entrada"> </td>
                                             <td class="numeric-cell center-table" id="horario_salida">  </td>
@@ -329,7 +336,11 @@
                                         </h4>
                                     </div>
                                 </div>
+                                
                                 <div class="container white z-depth-2">
+                                    <span>
+                                       Ingresa tu curp para vincular tu dispositivo
+                                </span>
                                     <div class="input-field col s12">
                                         <i class="mdi mdi-account-circle prefix">
                                         </i>
@@ -340,6 +351,9 @@
                                         </input>
                                     </div>
                                     <div class="list-block">
+                                      <span id="empr_message" style="display: none;">
+                                        Selecciona una empresa
+                                      </span>
                                       <ul id="list_empresa">
                                         
                                       </ul>
@@ -355,9 +369,7 @@
                                     onclick="jAsociate.asociate();" id="vincular">
                                         Vincular
                                     </a>
-                                    <span>
-                                        
-                                    </span>
+                                    
                                 </div>
                             </div>
                         </div>
